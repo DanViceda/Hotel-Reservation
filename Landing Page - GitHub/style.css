@@ -598,7 +598,6 @@ img {
     background: var(--secondary-color);
     color: var(--dark-three-color);
     border: none;
-    cursor: pointer;
 }
   
 @media (max-width: 768px) {
