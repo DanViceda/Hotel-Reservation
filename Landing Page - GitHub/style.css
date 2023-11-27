@@ -98,7 +98,7 @@ body{
 }
 
 .header-nav .contanier .nav-links a:hover {
-    border-color: var(--secondary-color);
+    border-color: var(--text-dark);
 }
 
 .header-nav .contanier .nav-links .log-in {
@@ -115,7 +115,7 @@ body{
 
 
 .header-nav .contanier .nav-links .log-in a:hover {
-    background-color: var(--primary-color);
+    background-color: var(--text-dark);
     color: var(--secondary-color);
 }
 
