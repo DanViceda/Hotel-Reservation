@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Reservation - Log in or Sign up</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="content login">
+            <h2>Login</h2>
+            <form action="#" method="post">
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="person"></ion-icon>
+                    </span>
+                    <input type="text" id="loginusername">
+                    <label for="loginusername">Username</label>
+                    <div class="errormsg"></div>
+                </div>
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon class="showpass" name="lock-closed"></ion-icon>
+                    </span>
+                    <input type="password" id="loginpassword">
+                    <label for="loginpassword">Password</label>
+                    <div class="errormsg"></div>
+                </div>
+                <div class="remember-me">
+                    <label>
+                        <input type="checkbox" name="rememberbox">Stay signed in
+                    </label>
+                </div>
+                <button type="submit" class="login-btn">Login</button>
+                <div class="forgot-pass">
+                    <a href="#">Forgot Password?</a>
+                </div>
+                <div class="sign-up"> 
+                    <a href="#" class="register-link">Create an account</a>
+                </div>
+            </form>
+        </div>
+        
+        <div class="content register">
+            <h2>Registration</h2>
+            <form id="registerform" action="#" method="post">
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="person"></ion-icon>
+                    </span>
+                    <input type="text" id="registerusername">
+                    <label for="registerusername">Username</label>
+                    <div class="errormsg"></div>
+                </div>
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="mail"></ion-icon>
+                    </span>
+                    <input type="text" id="registeremail">
+                    <label for="registeremail">Email</label>
+                    <div class="errormsg"></div>
+                </div>
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="lock-closed"></ion-icon>
+                    </span>
+                    <input type="password" id="registerpassword">
+                    <label for="registerpassword">Password</label>
+                    <div class="errormsg"></div>
+                </div>
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="lock-closed"></ion-icon>
+                    </span>
+                    <input type="password" id="registerpassword2">
+                    <label for="registerpassword2">Confirm Password</label>
+                    <div class="errormsg"></div>
+                </div>
+                <div class="terms-privacy">
+                    <label>
+                        <input type="checkbox" name="termsprivacybox" id="termsprivacy">I agree to the Hotel Reservation Terms.
+                    </label>
+                </div>
+                    <button type="submit" class="register-btn">Register</button>
+                <div class="sign-in"> 
+                    <a href="#" class="login-link">Login</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="customAlert">
+        <div class="modal-content">
+            <p id="alertMessage"></p>
+            <button id="closeAlert">OK</button>
+        </div>
+    </div>
+
+    <div class="parallaxbox">
+        <div class="img1 object" data-value="3"></div>
+        <div class="img2 object" data-value="-6"></div>
+        <div class="img3 object" data-value="9"></div>
+        <div class="img4 object" data-value="-6"></div>
+        <div class="img5 object" data-value="3"></div>
+        <div class="img6 object" data-value="-6"></div>
+        <div class="img7 object" data-value="9"></div>
+        <div class="img8 object" data-value="-6"></div>
+        <div class="img9 object" data-value="3"></div>
+        <div class="img10 object" data-value="-6"></div>
+    </div>
+    
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
