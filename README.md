@@ -1,4 +1,6 @@
 # Hotel-Reservation
 
 project based hotel reseravation
--  HCI-II
+-  Landing Page
+-  LogIn SignUp
+-  Main Page
