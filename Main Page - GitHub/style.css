@@ -277,33 +277,6 @@ body{
 }
 
 
-.main-text a.take,
-.main-text a.learn {
-    text-decoration: none;
-    color: inherit;
-}
-
-
-.main-text a.learn{
-    color: var(--primary-color);
-}
-
-#btn {
-    display: inline-block;
-    font-size: 1em;
-    padding: 10px 20px;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-weight: 400;
-    margin: 70px 20px;
-    letter-spacing: 1px;
-    border: none;
-}
-
-#btn i.fa-arrow-right-long {
-    margin-left: 6px;
-    font-size: 15px;
-}
 
 /* SECTION Showcase Responsiveness */
 @media (max-width: 991px) {
@@ -598,7 +571,6 @@ img {
     background: var(--secondary-color);
     color: var(--dark-three-color);
     border: none;
-    cursor: pointer;
 }
   
 @media (max-width: 768px) {
