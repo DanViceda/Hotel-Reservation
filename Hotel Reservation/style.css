@@ -719,24 +719,24 @@ img {
 /*CONTACT FORM*/
 #section-wrapper{
     width: 100%;
-    padding: 10px;
+    padding: 50px;
 }
 .box-wrapper{
     position: relative;
     display: table;
     width:1100px;
     margin:auto;
-    margin-top:35px;
+
     border-radius: 30px;
 }
 .info-wrap{
     width:35%;
-    height: 551px;
+    height: 661px;;
     padding: 40px;
     float: left;
     display: block;
     border-radius: 30px 0px 0px 30px;
-    background: linear-gradient(144deg, rgb(105, 105, 136) 0%, rgb(113, 107, 179) 49%);
+    background: linear-gradient(144deg, rgb(153, 134, 99) 0%, rgb(119, 87, 18) 49%);
     color: #fff;
 }
 .info-title{
@@ -761,7 +761,7 @@ img {
     color: #fff;
 }
 .info-details li i {
-    background: #F44770;
+    background: var(--dark-three-color);
     padding: 12px;
     border-radius: 50%;
     margin-right: 5px;
@@ -771,7 +771,7 @@ img {
     text-decoration: none;
 }
 .info-details li a:hover {
-    color: #F44770;
+    color: var(--dark-three-color);
 }
 .social-icons {
     list-style: none;
@@ -782,7 +782,7 @@ img {
     display: inline-block;
 }
 .social-icons li i {
-    background: #F44770;
+    background: var(--dark-three-color);
     color: #fff;
     padding: 15px;
     font-size: 20px;
@@ -793,7 +793,7 @@ img {
 }
 .social-icons li i:hover {
     background: #fff;
-    color: #000000;
+    color: var(--dark-one-color);
 }
 .form-wrap{
     width:65%;
@@ -850,12 +850,13 @@ img {
     cursor: pointer;
     color:#fff;
     text-align: center;
-    background: #F44770;
+    background: var(--dark-three-color);
     box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #ffffff;
     transition: .5s;
 }
 .submit-button:hover{
-    background: #31279d;
+    background: rgb(119, 87, 18);
+    color: var(--secondary-color);
 }
 /* Responsive css */
 @media only screen and (max-width: 767px) {
