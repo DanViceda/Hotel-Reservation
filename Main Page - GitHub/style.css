@@ -564,7 +564,8 @@ img {
     font-weight: 400;
     font-family: 'Lora', serif;;
 }
-  
+
+
 .gead-btn {
     font-size: 18px;
     padding: 10px 20px;
@@ -572,7 +573,12 @@ img {
     color: var(--dark-three-color);
     border: none;
 }
-  
+
+.gead-btn a {
+    color: var(--dark-three-color);
+    text-decoration: none;
+}
+
 @media (max-width: 768px) {
     .short {
         flex-direction: column;

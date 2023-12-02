@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Techno spark</title>
+  <link rel="stylesheet" href="./css/form.css">
+  <link rel="shortcut icon" type="x-icon" href="./images/icon.jpg">
+</head>
+<body>
+
+  <header>
+    <div class="content flex_space">
+      <div class="logo">
+         <a href="index.html" class="logo"> <img src="images/logo.png" alt=""></a>
+      </div>
+  </header>
+
+  <div class="background">
+      <h1 class="form-title">ENTER YOUR DETAILS</h1>
+      <form id="bookingForm" action="index.html" method="get">
+        <div class="main-user-info">
+                    
+          <div class="form-group">    
+            <label for="fullName">Full Name:</label>
+            <input type="text"id="fullName" name="fullName" placeholder="Enter Full Name" required>
+          </div>
+          
+          <div class="form-group"> 
+            <label for="email">Gmail:</label>
+            <input type="email" id="email"name="email"placeholder="Enter Email" required>
+          </div>     
+                
+          <div class="form-group">
+              <label for="phoneNumber">Phone Number:</label>
+            <input type="number" id="phoneNumber" name="phoneNumber"placeholder="Enter Phone Number" required>
+ </div>
+
+<div class="user-input-box">
+    <label for="contact-and-number">Contact Person:</label>
+    <input type="text" id="contact-person" name="contact-person" readonly>
+</div>
+
+<div class="user-input-box">
+    <label for="phone-number">Contact Number:</label>
+    <input type="text" id="phone-number" name="phone-number" readonly>
+</div>
+          
+          <div class="user-input-box">
+            <label for="room-number">Room Number:</label>
+    <input type="number" id="room-number" name="room-number" readonly>
+          </div>
+          
+               <div class="user-input-box">
+           <label for="staying">Day of Staying:</label>
+            <input type="number" id="staying" name="staying" placeholder="Enter Day of staying" required>         
+          </div>
+          
+              <div class="user-input-box">
+            <label for="guests">Number of Guests:</label>
+            <input type="number" id="guests" name="guests" placeholder="Enter # Guests" required>
+          </div>
+          
+          <div class="user-input-box">
+            <label for="roomType">Room Type:</label>
+    <select id="roomType" name="roomType" required>
+      <option value="" selected disabled>0 selected</option>
+      <option value="1" data-price="100">Single - &#8369; 100</option>
+      <option value="2" data-price="300">Double - &#8369; 300</option>
+      <option value="3" data-price="500">Suite - &#8369; 500</option>
+      <option value="4" data-price="700">Deluxe - &#8369; 700</option>
+      <option value="5" data-price="900">Family - &#8369; 900</option>
+    </select>
+          </div>
+           
+           <div class="form-group">       
+    <label for="hotelName">Hotel Name:</label>
+    <input type="text" id="hotelName" name="hotelName" readonly>
+</div>
+          
+          <div class="form-control">
+                    <label for="request">Special Request:</label>
+            <textarea type="text" id="request" name="request"placeholder="Enter Special Request" ></textarea>
+          </div>
+        </div>
+        
+        
+        <div class="user-input-box">
+            <label><ins>
+                <div id="totalCostDisplay"></div> 
+                <input type="hidden" name="selectedPrice" id="selectedPriceInput">
+               </ins> </label> 
+        </div>
+        
+        <div class="form-submit-btn">
+          <input type="submit" value="BOOK NOW">
+        </div>
+      </form>
+    </div>
+    
+    <!--HOTELNAME-->
+    <script>
+    function getHotelName() {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get('hotelName') || '';
+    }
+    function updateHotelName() {
+        document.getElementById('hotelName').value = getHotelName();
+    }
+    updateHotelName();
+</script>
+   <!--END HOTELNAME-->
+   
+     <!-- COMPUTATION -->
+ <script>
+    function updateTotalCost() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const hotelPrice = parseFloat(urlParams.get('hotelPrice').replace(/,/g, ''));
+        const roomTypePrice = parseFloat(document.getElementById('roomType').selectedOptions[0].dataset.price) || 0;
+        const numberOfGuests = parseInt(document.getElementById('guests').value) || 1;
+        const numberOfDays = parseInt(document.getElementById('staying').value) || 1;
+
+        const totalCost = (hotelPrice + roomTypePrice) * numberOfGuests * numberOfDays;
+
+        document.getElementById('totalCostDisplay').innerText = `Total Cost: ₱ ${totalCost}`;
+        document.getElementById('selectedPriceInput').value = totalCost;
+    }
+
+    document.getElementById('bookingForm').addEventListener('input', updateTotalCost);
+
+    updateTotalCost();
+</script>
+    <!-- END COMPUTATION -->
+            
+      <!-- CONTACT PERSON-->      
+    <script>
+    const contactPersons = ["John Arthur", "Vincente John", "Juswa Isdwo", "Juswa Asimo", "Santi Dope", "James Paul Walker", "Luji Mario"];
+    
+    function generateRandomPhoneNumber() {
+        const randomNumber = Math.floor(Math.random() * 900000000) + 100000000;
+        return "+09 " + randomNumber.toString().substring(0, 3) + "-" + randomNumber.toString().substring(3, 6) + "-" + randomNumber.toString().substring(6);
+    }
+    </script>
+    <!-- END CONTACT PERSON-->
+    
+    <!-- CONTACT NUMBER -->
+    <script>
+    const randomContactPersonIndex = Math.floor(Math.random() * contactPersons.length);
+    const selectedContactPerson = contactPersons[randomContactPersonIndex];
+
+    document.getElementById("contact-person").value = selectedContactPerson;
+    document.getElementById("phone-number").value = generateRandomPhoneNumber();        
+</script>
+<!-- CONTACT NUMBER-->
+    
+         <!-- ROOM NUMBER -->
+        <script>
+    function generateRoomNumber() {
+        const minRooms = 100;
+        const maxRooms = 500;
+        const roomNumber = Math.floor(Math.random() * (maxRooms - minRooms + 1)) + minRooms;
+        document.getElementById('room-number').value = roomNumber;
+    }
+
+    window.onload = generateRoomNumber;
+</script>
+       <!-- END ROOM NUMBER -->
+        
+  <footer>
+   <section class="contact" id="contact">
+    <div class="container grid">
+      <div class="box">
+        <h1>SPARKHOTEL</h1><br>
+        <p>Two basic services provided by a hotel are room and board. Thus, room (or the official term hotel accommodation) is the main service of the enterprise that belong to hotel business. Checking-in and checking-out are held round-the-clock. Besides providing an accommodation for temporary staying, related services such as changing bedclothes, giving towels and hygiene items, the opportunity to use appliances and TV set, cleaning and sanitation are available. All these services are included into the cost of a hotel room in accordance with contractual obligations.</p>
+
+      <div class="icon">
+<a href="https://www.facebook.com/cityofmalabonuniversity"
+target="_blank"><i class="fab fa-facebook-f"></i></a>
+<a href="https://twitter.com/CMU_Official94" target="_blank"><i class="fab fa-twitter"></i></a>
+<a href="https://instagram.com/cityofmalabonuniversity?igshid=NTc4MTIwNjQ2YQ==" target="_blank"><i class="fab fa-instagram"></i></a>
+<a href="https://youtube.com/@cityofmalabonuniversity" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+</div>
+      </div>
+
+      <div class="box">
+        <h2>Links</h2>
+        <ul>      
+          <li>Hotel</li>
+          <li>Contact Us</li>
+          <li>Services</li>
+          <li>Privacy Policy</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <h2>Contact Us</h2>
+        <p>Give us a call or drop by anytime, we endeavour to answer all enquiries within 24 hours on business days. We will be happy to answer your questions.
+        </p>
+        <i class="fa fa-location-dot"></i>
+        <label>Pampano cor., Maya-Maya Sts., Longos City of Malabon </label> <br>
+        <i class="fa fa-phone"></i>
+        <a href="tel:0905-574-8449">(+63)905-574-8449</a> <br>
+        <i class="fa fa-envelope"></i>
+        <a href = "mailto:isidrojoshua01@gmail.com?subject = Feedback&body = Message">
+TECHNOSPARK@GMAIL.COM</a><br>
+      </div>
+    </div>
+  </footer>
+
+  <div class="legal">
+    <p class="container">Copyright (c) 2023 Copyright Holder All Rights Reserved.</p>
+  </div>
+<script src="https://kit.fontawesome.com/f176bd162f.js"crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/032d11eac3.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

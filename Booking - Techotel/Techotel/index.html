@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Techno spark</title>
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="shortcut icon" type="x-icon" href="./images/icon.jpg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous"
+    referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js" integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA==" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+</head>
+<body>
+
+  <header>
+    <div class="content flex_space">
+      <div class="logo">
+        <img src="images/logo.png" alt=""></a>
+      </div>
+      
+      <div class="navlinks">
+        <ul id="menulist">
+          <li><a href="#hotel">hotel</a> </li>
+          <li><a href="#contact">contact</a></li>
+          <li> <i class="fa fa-search"></i></li>     
+        </ul>
+        </form>
+        <span class="fa fa-bars" onclick="menutoggle()"></span>
+      </div>
+    </div>
+  </header>
+
+  <script>
+    var menulist = document.getElementById('menulist');
+    menulist.style.maxHeight = "0px";
+
+    function menutoggle() {
+      if (menulist.style.maxHeight == "0px") {
+        menulist.style.maxHeight = "30vh";
+      } else {
+        menulist.style.maxHeight = "0px";
+      }
+    }
+  </script>
+
+
+  <section class="hotel" id="hotel">
+    <div class="container top">
+        <form id="hotelPriceForm" action="form.html" method="get">
+      <div class="heading">
+        <h1>EXPLORE</h1>
+        <h2>OUR HOTEL</h2>
+        <p>We have so much room for improvement. Every aspect of our lives must be subjected to an inventory of how we are taking responsibility.</p>
+      </div>
+
+      <div class="content mtop">
+        <div class="owl-carousel owl-carousel1 owl-theme">
+          <div class="items">
+            <div class="image">
+              <img src="images/hotel-1.png" alt="">
+            </div>
+            <div class="text">
+              <h2 id="hotelName">DIAMOND HOTEL</h2>
+              <div class="rate flex">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+                <p>- No Reservation Costs</p>
+                <p>- Great Rates</p>
+                <p>- 24/7</p>
+                <p>- Roxas Boulevard, Corner Dr. J. Quintos Street, Manila, 1000 Metro Manila.</p>
+              <div class="button flex">
+<button class="primary-btn" id="btn1" onclick="handleSubmit(1, 'DIAMOND HOTEL')">BOOK NOW</button>
+          <input type="hidden" id="hotelPrice1" name="hotelPrice" value="1,000">
+                <h3>&#8369; 1,000 <span> <br> Per Night </span> </h3>
+                
+              </div>
+            </div>
+          </div>
+          <div class="items">
+            <div class="image">
+              <img src="images/hotel-2.png" alt="">
+            </div>
+            <div class="text">
+              <h2 id="hotelName">THE MANILA HOTEL</h2>
+              <div class="rate flex">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+                <p>- Safety and comfort</p>
+                <p>- Elegance, and world-class service</p>
+                <p>- We continuously provides the best services,amenities for experience.</p>
+                <p>- 1 Rizal Park, Ermita, Manila, 0913 Metro Manila</p>
+              <div class="button flex">
+<button class="primary-btn" id="btn2" onclick="handleSubmit(2, 'THE MANILA HOTEL')">BOOK NOW</button>
+          <input type="hidden" id="hotelPrice2" name="hotelPrice" value="1,500">
+                <h3>&#8369; 1,500 <span> <br> Per Night </span> </h3>
+              </div>
+            </div>
+          </div>
+          <div class="items">
+            <div class="image">
+              <img src="images/hotel-3.png" alt="">
+            </div>
+            <div class="text">
+              <h2 id="hotelName">BAYVIEW PARK HOTEL MANILA</h2>
+              <div class="rate flex">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <p>- No Reservation Costs</p>
+                <p>- Wide Range of Properties</p>
+                <p>- Airport Taxi available</p>
+                <p>- 1118 Roxas Boulevard, corner United Nations Avenue, Ermita, Manila</p>
+              
+                  <div class="button flex">
+<button class="primary-btn" id="btn3" onclick="handleSubmit(3, 'BAYVIEW PARK HOTEL MANILA')">BOOK NOW</button>
+          <input type="hidden" id="hotelPrice3" name="hotelPrice" value="1,800">
+                <h3>&#8369; 1,800 <span> <br> Per Night </span> </h3>
+              </div>
+            </div>
+          </div>
+          
+          <div class="items">
+            <div class="image">
+              <img src="images/hotel-4.png" alt="">
+            </div>
+            <div class="text">
+              <h2 id="hotelName">CASALAY BOUTIQUE VILLAS AND DIVE</h2>
+              <div class="rate flex">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <p>- Crisp, 5-star quality linens</p>
+                <p>- Outdoor lounge with garden views.</p>
+                <p>- Breakfast included</p>
+                <p>- Sitio Dalaruan, Puerto Galera, 5203</p><br>
+               <div class="button flex">
+<button class="primary-btn" id="btn4" onclick="handleSubmit(4, 'CASALAY BOUTIQUE VILLAS AND DIVE')">BOOK NOW</button>
+          <input type="hidden" id="hotelPrice4" name="hotelPrice" value="2,000">
+                <h3>&#8369; 2,000 <span> <br> Per Night </span> </h3>
+              </div>
+            </div>
+          </div>
+          <div class="items">
+            <div class="image">
+              <img src="images/hotel-5.png" alt="">
+            </div>
+            <div class="text">
+              <h2 id="hotelName">SAVOY HOTEL MANILA</h2>
+              <div class="rate flex">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <p>- Great Location</p>
+                <p>- Friendly Staff,garden views, Outdoor lounge</p>
+                <p>- Clean and Tidy,Breakfast included</p>
+                <p>- 101 Andrews Ave, Pasay, 1300</p><br>
+                <div class="button flex">
+<button class="primary-btn" id="btn5" onclick="handleSubmit(5, 'SAVOY HOTEL MANILA')">BOOK NOW</button>
+          <input type="hidden" id="hotelPrice5" name="hotelPrice" value="2,100">
+                <h3>&#8369; 2,100 <span> <br> Per Night </span> </h3>
+              </div>
+            </div>
+          </div>
+          <div class="items">
+            <div class="image">
+              <img src="images/hotel-6.png" alt="">
+            </div>
+            <div class="text">
+              <h2 id="hotelName">MINI SUITES ETON TOWER</h2>
+              <div class="rate flex">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <p>- The Mini Suites Eton Tower Makati guarantees your peace of mind.</p>
+                <p>- Adults can take a dip and relax.</p>
+                <p>- 128 Dela Rosa Street, Legazpi Village, Makati</p><br>
+                <div class="button flex">
+<button class="primary-btn" id="btn6" onclick="handleSubmit(6, 'THE MINI SUITES ETON TOWER MAKATI')">BOOK NOW</button>
+          <input type="hidden" id="hotelPrice6" name="hotelPrice" value="2,500">
+                <h3>&#8369; 2,500 <span> <br> Per Night </span> </h3>
+              </div>
+            </div>
+          </div>
+          <div class="items">
+            <div class="image">
+              <img src="images/hotel-7.png" alt="">
+            </div>
+            <div class="text">
+              <h2 id="hotelName">MANILA MARRIOTT HOTEL</h2>
+              <div class="rate flex">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <p>- Offers You Endless Experiences and World-Class Rewards.</p>
+                <p>- Book Worry-Free With Our Flexible Cancellation Options. </p>
+                <p>- Fourth District, 2 Resorts Drive Pasay City, Manila, 1309</p>
+                <div class="button flex">
+<button class="primary-btn" id="btn7" onclick="handleSubmit(7, 'MANILA MARRIOTT HOTEL')">BOOK NOW</button>
+          <input type="hidden" id="hotelPrice7" name="hotelPrice" value="2,700">
+                <h3>&#8369; 2,700 <span> <br> Per Night </span> </h3>
+              </div>
+            </div>
+          </div>
+          <div class="items">
+            <div class="image">
+              <img src="images/hotel-8.png" alt="">
+            </div>
+            <div class="text">
+              <h2 id="hotelName">GRAND HYATT MANILA</h2>
+              <div class="rate flex">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <p>- As you book your stay to enjoy exclusive member benefits like this one.</p>
+              <p>- Member Rate Discount</p>
+              <p>- 8th Avenue, Corner 35th St, Taguig, 1634 Metro Manila</p><br>
+                <div class="button flex">
+<button class="primary-btn" id="btn8" onclick="handleSubmit(8, 'GRAND HYATT MANILA')">BOOK NOW</button>
+          <input type="hidden" id="hotelPrice8" name="hotelPrice" value="3,000">
+                <h3>&#8369; 3,000 <span> <br> Per Night </span> </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </form>
+  </section>
+  
+    <!-- DISPLAY HOTEL/PRICE -->
+<script>
+    function handleSubmit(buttonNumber, hotelName) {
+        document.getElementById('hotelPriceForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const hotelPriceValue = document.getElementById('hotelPrice' + buttonNumber).value;
+            const encodedHotelPrice = encodeURIComponent(hotelPriceValue);
+            const encodedHotelName = encodeURIComponent(hotelName);
+
+            window.location.href = `form.html?hotelPrice=${encodedHotelPrice}&hotelName=${encodedHotelName}`;
+        });
+    }
+</script>
+   <!-- END DISPLAY HOTEL/PRICE -->
+   
+  <script>
+    $('.owl-carousel1').owlCarousel({
+      loop: false,
+      margin: 40,
+      nav: true,
+      dots: true,
+      navText: ["<i class = 'fa fa-chevron-left'></i>", "<i class = 'fa fa-chevron-right'></i>"],
+      responsive: {
+        0: {
+          items: 1
+        },
+        768: {
+          items: 2,
+          margin: 10,
+        },
+        1000: {
+          items: 3
+        }
+      }
+    })
+  </script>
+
+  
+  <footer>
+  <section class="contact" id="contact">
+    <div class="container grid">
+      <div class="box">
+        <h1>SPARKHOTEL</h1><br>
+        <p>Two basic services provided by a hotel are room and board. Thus, room (or the official term hotel accommodation) is the main service of the enterprise that belong to hotel business. Checking-in and checking-out are held round-the-clock. Besides providing an accommodation for temporary staying, related services such as changing bedclothes, giving towels and hygiene items, the opportunity to use appliances and TV set, cleaning and sanitation are available. All these services are included into the cost of a hotel room in accordance with contractual obligations.</p>
+
+         <div class="icon">
+<a href="https://www.facebook.com/cityofmalabonuniversity"
+target="_blank"><i class="fab fa-facebook-f"></i></a>
+<a href="https://twitter.com/CMU_Official94" target="_blank"><i class="fab fa-twitter"></i></a>
+<a href="https://instagram.com/cityofmalabonuniversity?igshid=NTc4MTIwNjQ2YQ==" target="_blank"><i class="fab fa-instagram"></i></a>
+<a href="https://youtube.com/@cityofmalabonuniversity" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+</div>
+      </div>
+      <div class="box">
+        <h2>Links</h2>
+        <ul>
+          <li><a href="#hotel">Hotel</a> </li>
+          <li><a href="#contact">Contact Us</a> </li>
+          <li>Services</li>
+          <li>Privacy Policy</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <h2>Contact Us</h2>
+        <p>Give us a call or drop by anytime, we endeavour to answer all enquiries within 24 hours on business days. We will be happy to answer your questions.
+        </p>
+        <i class="fa fa-location-dot"></i>
+        <label>Pampano cor., Maya-Maya Sts., Longos City of Malabon </label> <br>
+        <i class="fa fa-phone"></i>
+        <a href="tel:0905-574-8449">(+63)905-574-8449</a> <br>
+        <i class="fa fa-envelope"></i>
+        <a href = "mailto:isidrojoshua01@gmail.com?subject = Feedback&body = Message">
+TECHNOSPARK@GMAIL.COM</a><br>
+      </div>
+    </div>
+  </footer>
+
+  <div class="legal">
+    <p class="container">Copyright (c) 2023 Copyright Holder All Rights Reserved.</p>
+  </div>
+<script src="https://kit.fontawesome.com/f176bd162f.js"crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/032d11eac3.js" crossorigin="anonymous"></script>
+</body>
+</html>
